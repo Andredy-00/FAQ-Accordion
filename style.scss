@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$accordion-box: hsl(0, 0%, 100%);
+$titles: hsl(292, 42%, 14%);
+$background: hsl(275, 100%, 97%);
+$small-letters: #A195A2;
+$paragraph-font-size: 16px;
+$border-box: 1px solid black;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    transition: .3s linear;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/images/background-pattern-desktop.svg)
+    top no-repeat, $background;
+    background-position-y: -5vh;
+}
+
+main {
+    max-width: 530px;
+    background-color: $accordion-box;
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px $small-letters;
+    padding: 28px;
+    margin: 20px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    margin: 2% 0% 2% 0%;
+
+    h1 {
+        color: $titles;
+        font-size: 45px;
+        margin-left: 3%;
+    }
+}
+
+.accordion-item {
+    
+    
+    .container {
+        display: flex;
+        height: 8vh;
+        justify-content: space-between;
+        align-items: center;
+    
+        h4 {
+            margin-right: 30px;
+        }
+
+        h4:hover {
+            color: #AD28EB;
+            cursor: pointer;
+        }
+    }
+
+    .accordion {
+        font-size: $paragraph-font-size;
+        font-weight: 400;
+        color: $small-letters;
+        margin-bottom: 1%;
+       overflow-y: hidden;
+    }
+
+    .expand-none {
+        height: 0;
+        
+    }
+    .expand {
+        height: 75px;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 530px) {
+    .accordion-item {
+        .expand {
+            height: 160px;
+        }
+    }
+}
+
+
+
+

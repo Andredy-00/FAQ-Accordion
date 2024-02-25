@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+  transition: 0.3s linear;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/images/background-pattern-desktop.svg) top no-repeat, hsl(275, 100%, 97%);
+  background-position-y: -5vh;
+}
+
+main {
+  max-width: 530px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px #A195A2;
+  padding: 28px;
+  margin: 20px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  margin: 2% 0% 2% 0%;
+}
+.title h1 {
+  color: hsl(292, 42%, 14%);
+  font-size: 45px;
+  margin-left: 3%;
+}
+
+.accordion-item .container {
+  display: flex;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-item .container h4 {
+  margin-right: 30px;
+}
+.accordion-item .container h4:hover {
+  color: #AD28EB;
+  cursor: pointer;
+}
+.accordion-item .accordion {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A195A2;
+  margin-bottom: 1%;
+  overflow-y: hidden;
+}
+.accordion-item .expand-none {
+  height: 0;
+}
+.accordion-item .expand {
+  height: 75px;
+}
+.accordion-item img:hover {
+  cursor: pointer;
+}
+.accordion-item p {
+  font-weight: 500;
+}
+
+@media (max-width: 530px) {
+  .accordion-item .expand {
+    height: 160px;
+  }
+}/*# sourceMappingURL=style.css.map */
